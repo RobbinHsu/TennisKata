@@ -29,5 +29,15 @@ namespace TennisTest
             tennis._firstPlayerScore++;
             Assert.AreEqual("Thirty Love", tennis.Score());
         }
+
+        [TestMethod]
+        public void FortyLoveTest()
+        {
+            var tennis = new Tennis();
+            tennis._firstPlayerScore++;
+            tennis._firstPlayerScore++;
+            tennis._firstPlayerScore++;
+            Assert.AreEqual("Forty Love", tennis.Score());
+        }
     }
 }
