@@ -6,38 +6,47 @@ namespace TennisTest
     [TestClass]
     public class TennisTest
     {
+        private Tennis tennis = new Tennis();
+
         [TestMethod]
         public void LoveAllTest()
         {
-            var tennis = new Tennis();
-            Assert.AreEqual("Love All", tennis.Score());
+            FirstPlayerGetScore(0);
+            ShouleBeEqual("Love All", tennis);
         }
 
         [TestMethod]
         public void FifteenLoveTest()
         {
-            var tennis = new Tennis();
-            tennis._firstPlayerScore++;
-            Assert.AreEqual("Fifteen Love", tennis.Score());
+            FirstPlayerGetScore(1);
+            ShouleBeEqual("Fifteen Love", tennis);
         }
 
         [TestMethod]
         public void ThirtyLoveTest()
         {
-            var tennis = new Tennis();
-            tennis._firstPlayerScore++;
-            tennis._firstPlayerScore++;
-            Assert.AreEqual("Thirty Love", tennis.Score());
+            FirstPlayerGetScore(2);
+            ShouleBeEqual("Thirty Love", tennis);
         }
 
         [TestMethod]
         public void FortyLoveTest()
         {
-            var tennis = new Tennis();
-            tennis._firstPlayerScore++;
-            tennis._firstPlayerScore++;
-            tennis._firstPlayerScore++;
-            Assert.AreEqual("Forty Love", tennis.Score());
+            FirstPlayerGetScore(3);
+            ShouleBeEqual("Forty Love", tennis);
+        }
+
+        private void FirstPlayerGetScore(int scores)
+        {
+            for (int i = 0; i < scores; i++)
+            {
+                tennis._firstPlayerScore++;
+            }
+        }
+
+        private void ShouleBeEqual(string expected, Tennis tennis)
+        {
+            Assert.AreEqual(expected, tennis.Score());
         }
     }
 }
