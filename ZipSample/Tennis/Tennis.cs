@@ -10,18 +10,16 @@ namespace ZipSample
     {
         private int _firstPlayerScoreTimes;
 
+        private Dictionary<int, string> scoreLookup = new Dictionary<int, string>
+        {
+            { 1,"Fifteen" },
+            { 2,"Thirty" },
+        };
+
         public string Socre()
         {
-            var scoreLookup = new Dictionary<int, string>
-            {
-                {1,"Fifteen" },
-                {2,"Thrity" },
-            };
-            if(_firstPlayerScoreTimes==1)
-            {
-                return $"{scoreLookup[_firstPlayerScoreTimes]} Love";
-            }
-            if (_firstPlayerScoreTimes == 2)
+
+            if(_firstPlayerScoreTimes==1 || _firstPlayerScoreTimes == 2)
             {
                 return $"{scoreLookup[_firstPlayerScoreTimes]} Love";
             }
