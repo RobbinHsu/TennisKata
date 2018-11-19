@@ -12,13 +12,18 @@ namespace ZipSample
 
         public string Socre()
         {
+            var scoreLookup = new Dictionary<int, string>
+            {
+                {1,"Fifteen" },
+                {2,"Thrity" },
+            };
             if(_firstPlayerScoreTimes==1)
             {
-                return "Fifteen Love";
+                return $"{scoreLookup[_firstPlayerScoreTimes]} Love";
             }
             if (_firstPlayerScoreTimes == 2)
             {
-                return "Thirty Love";
+                return $"{scoreLookup[_firstPlayerScoreTimes]} Love";
             }
 
             return "Love All";
