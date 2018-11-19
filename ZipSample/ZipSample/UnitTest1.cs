@@ -16,7 +16,7 @@ namespace ZipSample
         }
 
         [TestMethod]
-        public void Fifteen_All()
+        public void Fifteen_Love()
         {
             _tennis.FirstPlayerScore();
             ScoreShouldeBe("Fifteen All");
