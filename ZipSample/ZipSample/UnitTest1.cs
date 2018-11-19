@@ -15,12 +15,21 @@ namespace ZipSample
             ScoreShouldeBe("Love All");
         }
 
-        [TestMethod]
+        [TestMethod] 
         public void Fifteen_Love()
         {
             _tennis.FirstPlayerScore();
-            ScoreShouldeBe("Fifteen All");
+            ScoreShouldeBe("Fifteen Love");
         }
+
+        [TestMethod]
+        public void Thirty_Love()
+        {
+            _tennis.FirstPlayerScore();
+            _tennis.FirstPlayerScore();
+            ScoreShouldeBe("Thirty Love");
+        }
+
         private void ScoreShouldeBe(string expected)
         {
             Assert.AreEqual(expected, _tennis.Socre());
