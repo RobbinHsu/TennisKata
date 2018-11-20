@@ -39,15 +39,14 @@ namespace ZipSample
         [TestMethod]
         public void Love_Fifteen()
         {
-            _tennis.SecondPlayerScore();
+            GivenSecondPlayerScoreTimes(1);
             ScoreShouldeBe("Love Fifteen");
         }
 
         [TestMethod]
         public void Love_Thirty()
         {
-            _tennis.SecondPlayerScore();
-            _tennis.SecondPlayerScore();
+            GivenSecondPlayerScoreTimes(2);
             ScoreShouldeBe("Love Thirty");
         }
 
@@ -56,6 +55,14 @@ namespace ZipSample
             for (int i = 0; i < times; i++)
             {
                 _tennis.FirstPlayerScore();
+            }
+        }
+
+        private void GivenSecondPlayerScoreTimes(int times)
+        {
+            for (int i = 0; i < times; i++)
+            {
+                _tennis.SecondPlayerScore();
             }
         }
 
