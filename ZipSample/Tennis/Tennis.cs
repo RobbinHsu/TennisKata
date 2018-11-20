@@ -9,6 +9,7 @@ namespace ZipSample
     public class Tennis
     {
         private int _firstPlayerScoreTimes;
+        private int _secondPlayerScoreTimes;
 
         private Dictionary<int, string> scoreLookup = new Dictionary<int, string>
         {
@@ -16,10 +17,14 @@ namespace ZipSample
             { 2,"Thirty" },
             { 3,"Forty" },
         };
+        
 
         public string Socre()
         {
-
+            if(_secondPlayerScoreTimes==1)
+            {
+                return "Love Fifteen";
+            }
             if(_firstPlayerScoreTimes > 0)
             {
                 return $"{scoreLookup[_firstPlayerScoreTimes]} Love";
@@ -31,6 +36,11 @@ namespace ZipSample
         public void FirstPlayerScore()
         {
             _firstPlayerScoreTimes++;
+        }
+
+        public void SecondPlayerScore()
+        {
+            _secondPlayerScoreTimes++;
         }
     }
 }
