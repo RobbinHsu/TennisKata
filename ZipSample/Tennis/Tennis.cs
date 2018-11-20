@@ -26,12 +26,7 @@ namespace ZipSample
             {
                 return $"{scoreLookup[_firstPlayerScoreTimes]} {scoreLookup[_secondPlayerScoreTimes]}";
             }
-            if (_firstPlayerScoreTimes == 1 )
-            {
-                return $"{scoreLookup[_firstPlayerScoreTimes]} All";
-            }
-
-            return "Love All";
+            return $"{scoreLookup[_firstPlayerScoreTimes]} All";
         }
 
         public void FirstPlayerScore()
