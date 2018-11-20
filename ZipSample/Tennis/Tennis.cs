@@ -13,6 +13,7 @@ namespace ZipSample
 
         private Dictionary<int, string> scoreLookup = new Dictionary<int, string>
         {
+            { 0,"Love" },
             { 1,"Fifteen" },
             { 2,"Thirty" },
             { 3,"Forty" },
@@ -23,11 +24,11 @@ namespace ZipSample
         {
             if(_secondPlayerScoreTimes==1 || _secondPlayerScoreTimes == 2)
             {
-                return $"Love {scoreLookup[_secondPlayerScoreTimes]}";
+                return $"{scoreLookup[_firstPlayerScoreTimes]} {scoreLookup[_secondPlayerScoreTimes]}";
             }
             if (_firstPlayerScoreTimes > 0)
             {
-                return $"{scoreLookup[_firstPlayerScoreTimes]} Love";
+                return $"{scoreLookup[_firstPlayerScoreTimes]} {scoreLookup[_secondPlayerScoreTimes]}";
             }
 
             return "Love All";
