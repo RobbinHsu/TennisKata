@@ -18,16 +18,23 @@ namespace ZipSample
         [TestMethod] 
         public void Fifteen_Love()
         {
-            _tennis.FirstPlayerScore();
+            GivenFirstPlayerScoreTimes(1);
             ScoreShouldeBe("Fifteen Love");
         }
 
         [TestMethod]
         public void Thirty_Love()
         {
-            _tennis.FirstPlayerScore();
-            _tennis.FirstPlayerScore();
+            GivenFirstPlayerScoreTimes(2);
             ScoreShouldeBe("Thirty Love");
+        }
+
+        private void GivenFirstPlayerScoreTimes(int times)
+        {
+            for (int i = 0; i < times; i++)
+            {
+                _tennis.FirstPlayerScore();
+            }
         }
 
         private void ScoreShouldeBe(string expected)
