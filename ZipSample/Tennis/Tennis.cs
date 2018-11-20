@@ -25,7 +25,11 @@ namespace ZipSample
             {
                 return "Love Fifteen";
             }
-            if(_firstPlayerScoreTimes > 0)
+            if (_secondPlayerScoreTimes == 2)
+            {
+                return "Love Thirty";
+            }
+            if (_firstPlayerScoreTimes > 0)
             {
                 return $"{scoreLookup[_firstPlayerScoreTimes]} Love";
             }
