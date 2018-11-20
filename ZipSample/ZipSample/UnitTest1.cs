@@ -50,6 +50,14 @@ namespace ZipSample
             ScoreShouldeBe("Love Thirty");
         }
 
+        [TestMethod]
+        public void Fifteen_All()
+        {
+            GivenFirstPlayerScoreTimes(1);
+            GivenSecondPlayerScoreTimes(1);
+            ScoreShouldeBe("Fifteen All");
+        }
+
         private void GivenFirstPlayerScoreTimes(int times)
         {
             for (int i = 0; i < times; i++)

@@ -22,9 +22,13 @@ namespace ZipSample
 
         public string Socre()
         {
-            if(_firstPlayerScoreTimes > 0  || _secondPlayerScoreTimes > 0)
+            if (_firstPlayerScoreTimes != _secondPlayerScoreTimes )
             {
                 return $"{scoreLookup[_firstPlayerScoreTimes]} {scoreLookup[_secondPlayerScoreTimes]}";
+            }
+            if (_firstPlayerScoreTimes == 1 )
+            {
+                return $"{scoreLookup[_firstPlayerScoreTimes]} All";
             }
 
             return "Love All";
