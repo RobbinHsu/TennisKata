@@ -22,10 +22,24 @@ namespace ZipSample
 
         public string Socre()
         {
-            if (_firstPlayerScoreTimes != _secondPlayerScoreTimes )
+            if (IsScoreDifferent())
             {
-                return $"{scoreLookup[_firstPlayerScoreTimes]} {scoreLookup[_secondPlayerScoreTimes]}";
+                return LookupScore();
             }
+            return SameScore();
+        }
+
+        private bool IsScoreDifferent()
+        {
+            return _firstPlayerScoreTimes != _secondPlayerScoreTimes;
+        }
+        private string LookupScore()
+        {
+            return $"{scoreLookup[_firstPlayerScoreTimes]} {scoreLookup[_secondPlayerScoreTimes]}";
+        }
+
+        private string SameScore()
+        {
             return $"{scoreLookup[_firstPlayerScoreTimes]} All";
         }
 
