@@ -10,6 +10,7 @@ namespace ZipSample
     {
         private int _firstPlayerScoreTimes;
         private int _secondPlayerScoreTimes;
+        private string _firstPlayerName;
 
         private Dictionary<int, string> scoreLookup = new Dictionary<int, string>
         {
@@ -20,10 +21,22 @@ namespace ZipSample
         };
         
 
+        public Tennis(string firstPlayerName)
+        {
+            _firstPlayerName = firstPlayerName;
+        }
+
         public string Socre()
         {
             if (IsScoreDifferent())
             {
+                if(_firstPlayerScoreTimes>3)
+                {
+                    if(_firstPlayerScoreTimes- _secondPlayerScoreTimes==1)
+                    {
+                        return "Joey Adv";
+                    }
+                }
                 return LookupScore();
             }
             
