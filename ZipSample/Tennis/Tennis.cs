@@ -31,14 +31,11 @@ namespace ZipSample
         {
             if (IsScoreDifferent())
             {
-                if(_firstPlayerScoreTimes>3 || _secondPlayerScoreTimes>3)
+                if(IsReadyForGamePoint())
                 {
-                    if(Math.Abs(_firstPlayerScoreTimes- _secondPlayerScoreTimes)==1)
+                    if(IsAdv())
                     {
-                        var advPlayer = _firstPlayerScoreTimes > _secondPlayerScoreTimes
-                            ? _firstPlayerName
-                            : _secondPlayerName;
-                        return $"{advPlayer} Adv";
+                        return $"{advPlayer()} Adv";
                     }
                 }
                 return LookupScore();
@@ -51,6 +48,21 @@ namespace ZipSample
             return SameScore();
         }
 
+        private bool IsReadyForGamePoint()
+        {
+            return _firstPlayerScoreTimes > 3 || _secondPlayerScoreTimes > 3;
+        }
+
+        private bool IsAdv()
+        {
+            return Math.Abs(_firstPlayerScoreTimes - _secondPlayerScoreTimes) == 1;
+        }
+        private string advPlayer()
+        {
+            return _firstPlayerScoreTimes > _secondPlayerScoreTimes
+                ? _firstPlayerName
+                : _secondPlayerName;
+        }
         private bool IsDuece()
         {
             return _firstPlayerScoreTimes >= 3;
