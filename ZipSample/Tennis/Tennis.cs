@@ -27,13 +27,17 @@ namespace ZipSample
                 return LookupScore();
             }
             
-            if(_firstPlayerScoreTimes >= 3)
+            if(IsDuece())
             {
                 return "Deuce";
             }
             return SameScore();
         }
 
+        private bool IsDuece()
+        {
+            return _firstPlayerScoreTimes >= 3;
+        }
         private bool IsScoreDifferent()
         {
             return _firstPlayerScoreTimes != _secondPlayerScoreTimes;
