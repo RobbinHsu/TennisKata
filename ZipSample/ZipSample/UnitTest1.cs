@@ -66,6 +66,14 @@ namespace ZipSample
             ScoreShouldeBe("Thirty All");
         }
 
+        [TestMethod]
+        public void Deuce()
+        {
+            GivenFirstPlayerScoreTimes(3);
+            GivenSecondPlayerScoreTimes(3);
+            ScoreShouldeBe("Deuce");
+        }
+
         private void GivenFirstPlayerScoreTimes(int times)
         {
             for (int i = 0; i < times; i++)

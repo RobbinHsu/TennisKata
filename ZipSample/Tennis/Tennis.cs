@@ -26,6 +26,11 @@ namespace ZipSample
             {
                 return LookupScore();
             }
+            
+            if(_firstPlayerScoreTimes >= 3)
+            {
+                return "Deuce";
+            }
             return SameScore();
         }
 
