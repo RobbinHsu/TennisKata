@@ -69,11 +69,15 @@ namespace ZipSample
         [TestMethod]
         public void Deuce()
         {
-            GivenFirstPlayerScoreTimes(3);
-            GivenSecondPlayerScoreTimes(3);
+            GivenDeuce();
             ScoreShouldeBe("Deuce");
         }
 
+        private void GivenDeuce()
+        {
+            GivenFirstPlayerScoreTimes(3);
+            GivenSecondPlayerScoreTimes(3);
+        }
         private void GivenFirstPlayerScoreTimes(int times)
         {
             for (int i = 0; i < times; i++)
