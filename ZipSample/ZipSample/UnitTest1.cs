@@ -7,7 +7,7 @@ namespace ZipSample
     [TestClass]
     public class TennisTests
     {
-        private Tennis _tennis = new Tennis("Joey");
+        private Tennis _tennis = new Tennis("Joey", "Tom");
 
         [TestMethod] 
         public void Love_All() 
@@ -79,6 +79,14 @@ namespace ZipSample
             GivenDeuce();
             GivenFirstPlayerScoreTimes(1);
             ScoreShouldeBe("Joey Adv");
+        }
+
+        [TestMethod]
+        public void SecondPlayer_Adv()
+        {
+            GivenDeuce();
+            GivenSecondPlayerScoreTimes(1);
+            ScoreShouldeBe("Tom Adv");
         }
 
         private void GivenDeuce()
