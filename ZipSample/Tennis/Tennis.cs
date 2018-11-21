@@ -34,7 +34,7 @@ namespace ZipSample
                 {
                     if(_firstPlayerScoreTimes- _secondPlayerScoreTimes==1)
                     {
-                        return "Joey Adv";
+                        return $"{_firstPlayerName} Adv";
                     }
                 }
                 return LookupScore();
