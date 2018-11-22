@@ -37,6 +37,7 @@ namespace ZipSample
                     {
                         return $"{advPlayer()} Adv";
                     }
+                    return $"{advPlayer()} Win";
                 }
                 return LookupScore();
             }

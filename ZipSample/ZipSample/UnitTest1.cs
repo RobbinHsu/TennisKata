@@ -89,6 +89,14 @@ namespace ZipSample
             ScoreShouldeBe("Tom Adv");
         }
 
+        [TestMethod]
+        public void SecondPlayer_Win()
+        {
+            GivenDeuce();
+            GivenSecondPlayerScoreTimes(2);
+            ScoreShouldeBe("Tom Win");
+        }
+
         private void GivenDeuce()
         {
             GivenFirstPlayerScoreTimes(3);
