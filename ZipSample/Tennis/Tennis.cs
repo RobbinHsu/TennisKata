@@ -29,26 +29,20 @@ namespace ZipSample
 
         public string Socre()
         {
-            if (IsScoreDifferent())
-            {
-                if(IsReadyForGamePoint())
-                {
-                    if(IsAdv())
-                    {
-                        return $"{advPlayer()} Adv";
-                    }
-                    return $"{advPlayer()} Win";
-                }
-                return LookupScore();
-            }
-            
-            if(IsDuece())
-            {
-                return "Deuce";
-            }
-            return SameScore();
+            return IsScoreDifferent()
+                ? (IsReadyForGamePoint() ? AdvState() : LookupScore())
+                : (IsDuece() ? Deuce() : SameScore());
         }
 
+        private string Deuce()
+        {
+            return "Deuce";
+        }
+
+        private string AdvState()
+        {
+            return IsAdv() ? $"{advPlayer()} Adv" : $"{advPlayer()} Win";
+        }
         private bool IsReadyForGamePoint()
         {
             return _firstPlayerScoreTimes > 3 || _secondPlayerScoreTimes > 3;
