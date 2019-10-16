@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisKata", "TennisKata\TennisKata.csproj", "{E734B6AE-96A7-44AB-80E6-3614418D98EC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisTest", "TennisTest\TennisTest.csproj", "{0784348B-D771-40E7-A25E-32BC00FBE371}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisKata", "TennisKata\TennisKata.csproj", "{B2E8A388-3AD9-4D2D-B9B4-AC52F0666685}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E734B6AE-96A7-44AB-80E6-3614418D98EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E734B6AE-96A7-44AB-80E6-3614418D98EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E734B6AE-96A7-44AB-80E6-3614418D98EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E734B6AE-96A7-44AB-80E6-3614418D98EC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0784348B-D771-40E7-A25E-32BC00FBE371}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0784348B-D771-40E7-A25E-32BC00FBE371}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0784348B-D771-40E7-A25E-32BC00FBE371}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0784348B-D771-40E7-A25E-32BC00FBE371}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2E8A388-3AD9-4D2D-B9B4-AC52F0666685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2E8A388-3AD9-4D2D-B9B4-AC52F0666685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2E8A388-3AD9-4D2D-B9B4-AC52F0666685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2E8A388-3AD9-4D2D-B9B4-AC52F0666685}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
