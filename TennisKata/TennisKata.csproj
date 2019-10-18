@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomScoreTemplate.cs" />
+    <Compile Include="Tennis.cs" />
     <Compile Include="TennisTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
