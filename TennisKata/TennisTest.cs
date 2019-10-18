@@ -20,6 +20,14 @@ namespace TennisKata
             ScoreShouldBe("Fifteen Love");
         }
 
+        [TestMethod]
+        public void Thirty_Love()
+        {
+            _tennis.FirstPlayerScore();
+            _tennis.FirstPlayerScore();
+            ScoreShouldBe("Thirty Love");
+        }
+
         private void ScoreShouldBe(string expected)
         {
             Assert.AreEqual(expected, _tennis.Score());
