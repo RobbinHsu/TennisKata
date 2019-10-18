@@ -67,9 +67,14 @@ namespace TennisKata
         [TestMethod]
         public void Deuce()
         {
+            GivenDeuce();
+            ScoreShouldBe("Deuce");
+        }
+
+        private void GivenDeuce()
+        {
             FirstPlayerGetScore(3);
             SecondPlayerGetScore(3);
-            ScoreShouldBe("Deuce");
         }
 
         private void SecondPlayerGetScore(int times)
