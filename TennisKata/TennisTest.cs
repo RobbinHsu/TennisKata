@@ -37,16 +37,23 @@ namespace TennisKata
         [TestMethod]
         public void Love_Fifteen()
         {
-            _tennis.SecondPlayerScore();
+            SecondPlayerGetScore(1);
             ScoreShouldBe("Love Fifteen");
         }
 
         [TestMethod]
         public void Love_Thirty()
         {
-            _tennis.SecondPlayerScore();
-            _tennis.SecondPlayerScore();
+            SecondPlayerGetScore(2);
             ScoreShouldBe("Love Thirty");
+        }
+
+        private void SecondPlayerGetScore(int times)
+        {
+            for (int i = 0; i < times; i++)
+            {
+                _tennis.SecondPlayerScore();
+            }
         }
 
         private void FirstPlayerGetScore(int times)
