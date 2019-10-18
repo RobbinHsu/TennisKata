@@ -95,6 +95,14 @@ namespace TennisKata
             ScoreShouldBe("Tom Win");
         }
 
+        [TestMethod]
+        public void FirstPlayer_Win()
+        {
+            GivenDeuce();
+            FirstPlayerGetScore(2);
+            ScoreShouldBe("Joey Win");
+        }
+
         private void GivenDeuce()
         {
             FirstPlayerGetScore(3);
