@@ -56,6 +56,14 @@ namespace TennisKata
             ScoreShouldBe("Fifteen All");
         }
 
+        [TestMethod]
+        public void Thirty_All()
+        {
+            FirstPlayerGetScore(2);
+            SecondPlayerGetScore(2);
+            ScoreShouldBe("Thirty All");
+        }
+
         private void SecondPlayerGetScore(int times)
         {
             for (int i = 0; i < times; i++)

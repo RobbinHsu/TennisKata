@@ -27,6 +27,10 @@ namespace TennisKata
             {
                 return "Fifteen All";
             }
+            if (_firstPlayerScore == 2)
+            {
+                return "Thirty All";
+            }
             return "Love All";
         }
 
