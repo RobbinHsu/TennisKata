@@ -33,8 +33,7 @@ namespace TennisKata
                 {
                     if (Math.Abs(_firstPlayerScore - _secondPlayerScore) == 1)
                     {
-                        var advPlayer = _firstPlayerScore > _secondPlayerScore ? _firstPlayerName : _secondPlayerName;
-                        return $"{advPlayer} Adv";
+                        return $"{AdvPlayer()} Adv";
                     }
                 }
 
@@ -46,6 +45,12 @@ namespace TennisKata
                 return "Deuce";
             }
             return $"{_scoreLookup[_firstPlayerScore]} All";
+        }
+
+        private string AdvPlayer()
+        {
+            var advPlayer = _firstPlayerScore > _secondPlayerScore ? _firstPlayerName : _secondPlayerName;
+            return advPlayer;
         }
 
         public void FirstPlayerScore()
