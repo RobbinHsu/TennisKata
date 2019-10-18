@@ -22,13 +22,9 @@ namespace TennisKata
                 return $"{_scoreLookup[_firstPlayerScore]} Love";
             }
 
-            if (_secondPlayerScore == 1)
+            if (_secondPlayerScore > 0)
             {
-                return "Love Fifteen";
-            }
-            if (_secondPlayerScore == 2)
-            {
-                return "Love Thirty";
+                return $"Love {_scoreLookup[_secondPlayerScore]}";
             }
             return "Love All";
         }
