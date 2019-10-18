@@ -13,6 +13,8 @@ namespace TennisKata
             {3,"Forty" },
         };
 
+        private int _secondPlayerScore;
+
         public string Score()
         {
             if (_firstPlayerScore > 0)
@@ -20,12 +22,21 @@ namespace TennisKata
                 return $"{_scoreLookup[_firstPlayerScore]} Love";
             }
 
+            if (_secondPlayerScore == 1)
+            {
+                return "Love Fifteen";
+            }
             return "Love All";
         }
 
         public void FirstPlayerScore()
         {
             _firstPlayerScore++;
+        }
+
+        public void SecondPlayerScore()
+        {
+            _secondPlayerScore++;
         }
     }
 }
