@@ -23,6 +23,10 @@ namespace TennisKata
                 return $"{_scoreLookup[_firstPlayerScore]} {_scoreLookup[_secondPlayerScore]}";
             }
 
+            if (_firstPlayerScore == 3)
+            {
+                return "Deuce";
+            }
             return $"{_scoreLookup[_firstPlayerScore]} All";
         }
 
