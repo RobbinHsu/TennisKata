@@ -23,15 +23,7 @@ namespace TennisKata
                 return $"{_scoreLookup[_firstPlayerScore]} {_scoreLookup[_secondPlayerScore]}";
             }
 
-            if (_firstPlayerScore == 1)
-            {
-                return "Fifteen All";
-            }
-            if (_firstPlayerScore == 2)
-            {
-                return "Thirty All";
-            }
-            return "Love All";
+            return $"{_scoreLookup[_firstPlayerScore]} All";
         }
 
         public void FirstPlayerScore()
