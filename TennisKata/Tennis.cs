@@ -18,11 +18,15 @@ namespace TennisKata
 
         public string Score()
         {
-            if (_firstPlayerScore > 0 || _secondPlayerScore > 0)
+            if (_firstPlayerScore != _secondPlayerScore)
             {
                 return $"{_scoreLookup[_firstPlayerScore]} {_scoreLookup[_secondPlayerScore]}";
             }
 
+            if (_firstPlayerScore == 1)
+            {
+                return "Fifteen All";
+            }
             return "Love All";
         }
 
