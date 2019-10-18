@@ -27,6 +27,13 @@ namespace TennisKata
             ScoreShouldBe("Thirty Love");
         }
 
+        [TestMethod]
+        public void Forty_Love()
+        {
+            FirstPlayerGetScore(3);
+            ScoreShouldBe("Forty Love");
+        }
+
         private void FirstPlayerGetScore(int times)
         {
             for (int i = 0; i < times; i++)
